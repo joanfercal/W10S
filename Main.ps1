@@ -269,19 +269,6 @@ $Label19.height                  = 10
 $Label19.location                = New-Object System.Drawing.Point(63,126)
 $Label19.Font                    = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 
-# $PictureBox1                     = New-Object system.Windows.Forms.PictureBox
-# $PictureBox1.width               = 343
-# $PictureBox1.height              = 136
-# $PictureBox1.location            = New-Object System.Drawing.Point(580,850)
-# $PictureBox1.imageLocation       = "https://github.com/ChrisTitusTech/win10script/blob/master/titus-toolbox.png?raw=true"
-# $PictureBox1.SizeMode            = [System.Windows.Forms.PictureBoxSizeMode]::zoom
-# $lightmode                       = New-Object system.Windows.Forms.Button
-# $lightmode.text                  = "Light Mode"
-# $lightmode.width                 = 205
-# $lightmode.height                = 30
-# $lightmode.location              = New-Object System.Drawing.Point(3,350)
-# $lightmode.Font                  = New-Object System.Drawing.Font('Microsoft Sans Serif',12)
-
 $Label1                          = New-Object system.Windows.Forms.Label
 $Label1.text                     = "Install"
 $Label1.AutoSize                 = $true
