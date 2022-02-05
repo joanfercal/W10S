@@ -622,7 +622,7 @@ $Panel3.controls.AddRange(@($yourphonefix,$Label6,$windowsupdatefix,$ncpa,$oldco
 $brave.Add_Click({
     Write-Host "Downloading script"
     $ResultText.text = "`r`n" +"`r`n" + "Running ahk script" 
-    New-Item -Path "C:\RMTX" -Name "AHK" -ItemType "directory"
+    # New-Item -Path "C:\RMTX" -Name "AHK" -ItemType "directory"
     Start-BitsTransfer -Source "https://x.jafc.pro/W10S1" -Destination "c:\RMTX\AHK\Bindings.exe" | Out-Host
     if($?) { Write-Host "Script running" }
     $ResultText.text = "`r`n" + "Script running" + "`r`n" + "`r`n" + "Ready for Next Task"
