@@ -1,5 +1,5 @@
 #WinActivateForce
-;#NoTrayIcon
+#NoTrayIcon
 #SingleInstance, force
 SetTitleMatchMode, 2
 SetTitleMatchMode, fast
