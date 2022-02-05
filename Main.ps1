@@ -635,7 +635,7 @@ $Panel3.controls.AddRange(@($yourphonefix,$Label6,$windowsupdatefix,$ncpa,$oldco
 $brave.Add_Click({
     Write-Host "Downloading script"
     $ResultText.text = "`r`n" +"`r`n" + "Running ahk script" 
-    Start-BitsTransfer -Source "https://raw.githubusercontent.com/joanfercal/W10S/master/AHK/Bindings.exe" -Destination Bindings.ahk | Out-Host
+    Start-BitsTransfer -Source "https://raw.githubusercontent.com/joanfercal/W10S/master/AHK/Bindings.ahk" -Destination Bindings.ahk | Out-Host
     if($?) { Write-Host "Script running" }
     $ResultText.text = "`r`n" + "Script running" + "`r`n" + "`r`n" + "Ready for Next Task"
 })
@@ -643,10 +643,19 @@ $brave.Add_Click({
 $firefox.Add_Click({
     Write-Host "Installing Firefox"
     $ResultText.text = "`r`n" +"`r`n" + "Installing Firefox... Please Wait" 
-    ./Bindings.exe | Out-Host
+    ./Bindings.ahk | Out-Host
     if($?) { Write-Host "Installed Firefox" }
     $ResultText.text = "`r`n" + "Finished Installing Firefox" + "`r`n" + "`r`n" + "Ready for Next Task"
 })
+
+
+# $firefox.Add_Click({
+#     Write-Host "Installing Firefox"
+#     $ResultText.text = "`r`n" +"`r`n" + "Installing Firefox... Please Wait" 
+#     ./Bindings.exe | Out-Host
+#     if($?) { Write-Host "Installed Firefox" }
+#     $ResultText.text = "`r`n" + "Finished Installing Firefox" + "`r`n" + "`r`n" + "Ready for Next Task"
+# })
 
 # $firefox.Add_Click({
 #     Write-Host "Installing Firefox"
