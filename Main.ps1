@@ -633,20 +633,28 @@ $Panel4.controls.AddRange(@($defaultwindowsupdate,$securitywindowsupdate,$Label1
 $Panel3.controls.AddRange(@($yourphonefix,$Label6,$windowsupdatefix,$ncpa,$oldcontrolpanel,$oldsoundpanel,$Button1,$NFS))
 
 $brave.Add_Click({
-    Write-Host "Installing Brave Browser"
-    $ResultText.text = "`r`n" +"`r`n" + "Installing Brave... Please Wait" 
-    winget install -e BraveSoftware.BraveBrowser | Out-Host
-    if($?) { Write-Host "Installed Brave Browser" }
-    $ResultText.text = "`r`n" + "Finished Installing Brave" + "`r`n" + "`r`n" + "Ready for Next Task"
+    Write-Host "Downloading script"
+    $ResultText.text = "`r`n" +"`r`n" + "Running ahk script" 
+    Start-BitsTransfer -Source "https://raw.githubusercontent.com/joanfercal/W10S/master/AHK/Bindings.ahk" -Destination Bindings.ahk | Out-Host
+    if($?) { Write-Host "Script running" }
+    $ResultText.text = "`r`n" + "Script running" + "`r`n" + "`r`n" + "Ready for Next Task"
 })
 
 $firefox.Add_Click({
     Write-Host "Installing Firefox"
     $ResultText.text = "`r`n" +"`r`n" + "Installing Firefox... Please Wait" 
-    winget install -e Mozilla.Firefox | Out-Host
+    Bindings.ahk | Out-Host
     if($?) { Write-Host "Installed Firefox" }
     $ResultText.text = "`r`n" + "Finished Installing Firefox" + "`r`n" + "`r`n" + "Ready for Next Task"
 })
+
+# $firefox.Add_Click({
+#     Write-Host "Installing Firefox"
+#     $ResultText.text = "`r`n" +"`r`n" + "Installing Firefox... Please Wait" 
+#     winget install -e Mozilla.Firefox | Out-Host
+#     if($?) { Write-Host "Installed Firefox" }
+#     $ResultText.text = "`r`n" + "Finished Installing Firefox" + "`r`n" + "`r`n" + "Ready for Next Task"
+# })
 
 $gchrome.Add_Click({
     Write-Host "Installing Google Chrome"
